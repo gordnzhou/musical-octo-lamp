@@ -37,11 +37,10 @@ def is_angle_between(first_angle, middle_angle, second_angle):
 
     if first_angle > second_angle:
         first_angle, second_angle = second_angle, first_angle
-    
+
     if second_angle - first_angle == 180.0:
-        return True # no reflex angle
+        return True  # no reflex angle
     elif second_angle - first_angle < 180.0:
         return first_angle <= middle_angle and middle_angle <= second_angle
     else:
         return second_angle <= middle_angle or middle_angle <= first_angle
-
